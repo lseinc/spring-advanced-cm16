@@ -3,7 +3,7 @@ package com.lse.spring.example.atm;
 import org.junit.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class AccountDaoTest extends BaseIntegrationTest {
+public class AccountDaoJdbcTest extends BaseIntegrationTest {
 
     private static final String ACCT1 = "9999887777";
     private static final String ACCT2 = "9999887778";

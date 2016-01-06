@@ -83,7 +83,7 @@ public class ChaseBank implements Bank {
 	
 	private Account fetchAccount(String accountNumber) {
 		System.out.println("looking up accountNumber="+accountNumber);
-		Account account = accountDao.fetchAccount(accountNumber);
+		Account account = accountDao.findOne(accountNumber);
 		if (account==null) {
 			throw new MissingAccountException("account "+account+" not found");
 		}

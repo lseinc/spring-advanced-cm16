@@ -32,7 +32,7 @@ public class UserApplicationTest extends BaseIntegrationTest {
 
     @Before
     public void setup() {
-        Account found = dao.fetchAccount(user.getCheckingAccountNumber());
+        Account found = dao.findOne(user.getCheckingAccountNumber());
         if (found != null) {
             Account account = new Account(found);
             account.setBalance(0.0);

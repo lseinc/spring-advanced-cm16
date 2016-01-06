@@ -44,12 +44,9 @@ public class ChaseBank implements Bank {
 		account = accountDao.save(account);
 		System.out.println("bank checking balance: "+account.getBalance()+" for accountNumber="+accountNumber);
 		
-//		accountDao.audit("debit attempted", account.getAccountNumber(), amount);
-		
 		return account.getBalance();
 	}
 
-	@Transactional(timeout=20)
 	public void transfer(String fromAccountNumber, String toAccountNumber, double amount) {
 		System.out.println("transfer "+amount+" from account="+fromAccountNumber+" to account="+toAccountNumber);
 
@@ -67,7 +64,7 @@ public class ChaseBank implements Bank {
 //			throw new RuntimeException("OOPS ERROR");
 //		}
 //		try {
-//			Thread.sleep(21000L);
+//			Thread.sleep(300000L);
 //		} catch (InterruptedException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();

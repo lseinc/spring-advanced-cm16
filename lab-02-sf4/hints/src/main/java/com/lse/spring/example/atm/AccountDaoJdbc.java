@@ -1,7 +1,7 @@
 package com.lse.spring.example.atm;
 
-import org.springframework.beans.factory.annotation.*;
-import org.springframework.jdbc.core.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +19,6 @@ public class AccountDaoJdbc implements AccountDao {
 	private static final String SQL_UPDATE_ACCOUNT = "update ACCOUNT set balance=:balance,acct_type=:type where acct_number=:acct";
 
 	private static final String SQL_FETCH_ACCOUNT = "select acct_number, balance, acct_type from account where acct_number=:acct";
-
-	private static final String SQL_DELETE_ACCOUNT = "delete from ACCOUNT where acct_number=:acct";
 
 	private DataSource dataSource;
 
@@ -96,7 +94,7 @@ public class AccountDaoJdbc implements AccountDao {
 		if (found != null) {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("acct", accountNumber);
-			jdbc.update(SQL_DELETE_ACCOUNT, map);
+			jdbc.update("delete from ACCOUNT where acct_number=:acct", map);
 		}
 	}
 

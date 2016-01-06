@@ -1,8 +1,8 @@
 package com.lse.spring.example.atm;
 
-import org.springframework.dao.EmptyResultDataAccessException;
-
 import javax.transaction.Transactional;
+
+import org.springframework.dao.EmptyResultDataAccessException;
 
 
 @Transactional(dontRollbackOn = {EmptyResultDataAccessException.class})

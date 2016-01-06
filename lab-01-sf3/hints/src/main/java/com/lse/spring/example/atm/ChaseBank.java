@@ -44,12 +44,9 @@ public class ChaseBank implements Bank {
 		account = accountDao.save(account);
 		System.out.println("bank checking balance: "+account.getBalance()+" for accountNumber="+accountNumber);
 		
-//		accountDao.audit("debit attempted", account.getAccountNumber(), amount);
-		
 		return account.getBalance();
 	}
 
-	@Transactional
 	public void transfer(String fromAccountNumber, String toAccountNumber, double amount) {
 		System.out.println("transfer "+amount+" from account="+fromAccountNumber+" to account="+toAccountNumber);
 
@@ -86,7 +83,7 @@ public class ChaseBank implements Bank {
 	
 	private Account fetchAccount(String accountNumber) {
 		System.out.println("looking up accountNumber="+accountNumber);
-		Account account = accountDao.fetchAccount(accountNumber);
+		Account account = accountDao.findOne(accountNumber);
 		if (account==null) {
 			throw new MissingAccountException("account "+account+" not found");
 		}

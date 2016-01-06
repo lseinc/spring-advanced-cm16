@@ -1,5 +1,6 @@
 package com.lse.spring.example.atm;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,8 +18,6 @@ public class AccountDaoJdbc implements AccountDao {
 
 	private static final String SQL_FETCH_ACCOUNT = "select acct_number, balance, acct_type from account where acct_number=:acct";
 
-	private  static final String SQL_DELETE_ACCOUNT = "delete from ACCOUNT where acct_number=:acct";
-
 	private DataSource dataSource;
 
 	private NamedParameterJdbcTemplate jdbc;
@@ -27,6 +26,7 @@ public class AccountDaoJdbc implements AccountDao {
 		return dataSource;
 	}
 
+	@Autowired
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 		jdbc = new NamedParameterJdbcTemplate(dataSource);
@@ -44,10 +44,11 @@ public class AccountDaoJdbc implements AccountDao {
 			return obj;
 		}
 	};
+
 	private AccountMapper mapper = new AccountMapper();
 
 	@Transactional(readOnly = true)
-	public Account fetchAccount(String accountNumber) {
+	public Account findOne(String accountNumber) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("acct", accountNumber);
 		Account result = null;
@@ -59,9 +60,9 @@ public class AccountDaoJdbc implements AccountDao {
 	}
 
 	@Transactional(readOnly = true)
-	public int countAllAccounts() {
+	public long count() {
 		Map<String, Object> map = new HashMap<String, Object>();
-		int count = jdbc.queryForInt(SQL_COUNT_ALL, map);
+		int count = jdbc.queryForObject(SQL_COUNT_ALL, map, Integer.class);
 		return count;
 	}
 
@@ -73,7 +74,7 @@ public class AccountDaoJdbc implements AccountDao {
 		map.put("balance", account.getBalance());
 
 		// do we update or insert?
-		Account found = fetchAccount(account.getAccountNumber());
+		Account found = findOne(account.getAccountNumber());
 		if (found != null) {
 			jdbc.update(SQL_UPDATE_ACCOUNT, map);
 		} else {
@@ -81,26 +82,25 @@ public class AccountDaoJdbc implements AccountDao {
 		}
 		// what if the insert or update triggered a data change, get the latest
 		// and return it
-		found = fetchAccount(account.getAccountNumber());
+		found = findOne(account.getAccountNumber());
 		return found;
 	}
 
 	@Transactional
-	public Account remove(String accountNumber) {
-		Account found = fetchAccount(accountNumber);
+	public void delete(String accountNumber) {
+		Account found = findOne(accountNumber);
 		if (found != null) {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("acct", accountNumber);
-			jdbc.update(SQL_DELETE_ACCOUNT, map);
+			jdbc.update("delete from ACCOUNT where acct_number=:acct", map);
 		}
-		return found;
 	}
 
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		sb.append("{ class: ");
 		sb.append(this.getClass().getCanonicalName());
-		sb.append(",\n\t size: ").append(countAllAccounts());
+		sb.append(",\n\t size: ").append(count());
 		sb.append(" }\n");
 		return sb.toString();
 	}
