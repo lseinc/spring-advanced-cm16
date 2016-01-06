@@ -22,7 +22,7 @@
 - <a href="lab-02-sf4">lab-02-sf4</a>
 - <a href="lab-03-jpa">lab-03-jpa</a>
 - <a href="lab-04-jms">lab-04-jms</a>
-- <a href="lab-05-jaxrs">lab-01-jaxrs</a>
+- <a href="lab-05-jaxrs">lab-05-jaxrs</a>
 
 --
 Notes:  Each lab has a hints directory of a very basic implementation, limited JUnits, for demostration only.  Lab 4 and 5 have a setup directory to copy some common properties and files to speed up the lab.
