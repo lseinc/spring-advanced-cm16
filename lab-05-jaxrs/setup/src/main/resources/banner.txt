@@ -1,0 +1,39 @@
+${AnsiColor.BRIGHT_RED}
+${AnsiColor.BRIGHT_RED}                                                                                                    `:yssss:   `.::oooos+:-`
+${AnsiColor.BRIGHT_RED}                                                                                                  /oyyyyyyy: :+syhhysssyhhyso-
+${AnsiColor.BRIGHT_RED}      ..:+..`    ......   ........`  ......... ...`        ....   ....`     `......   ....` ....` /yyyyyyyyossyh+.       .ohyso-
+${AnsiColor.BRIGHT_RED}     /yyysyys: `oyyssyys/ oyyysyyyy-`syyyssyyy`+sss:      /sss/   sssss-   `sssosss+. ssss: osss/  yysyyyyysshs.   `..``   .yhss:
+${AnsiColor.BRIGHT_RED}    :yyo` :yys +yys``+yy/ `yyy ./yyy`:yy+  -++ :ssss:   `/ssss`   ossss-   oss: `+ss- .sso  `sss   `` yyyyssyh`   `:```:`.` `dyss.
+${AnsiColor.BRIGHT_RED}    :yy+  `-o/ +yy:  /yy/ `yyy   yyy`:yy+      :sssss: .osssss`   ss/ss+`  +ss+. .-o- .sso  `sss      yyyysshs  `..:...-`.`  yhss+
+${AnsiColor.BRIGHT_RED}    :yy+       +yy:  /yy/ `yyy   yyy`:yys///.  :ssyyss+ossssss`  /ss-sss`  `/sss+:`   .sso::/sss      yyysssyh` .-.`        `dyss+
+${AnsiColor.BRIGHT_RED}    :yy+       +yy:  /yy/ `yyy   yyy`:yys+++-  :ssy+/ssss-+sss`  +ss.-ss+    `:+sss/` .sss//+sss      yyyyssshs.  -:...:.  .yysss+
+${AnsiColor.BRIGHT_RED}    :yy+   `.. +yy:  /yy/ `yyy   yyy`:yy+      :ssy: :oo. +sss` :ssssssss  ...  `+ss- .sso  `sss      yyyyysssyh+.sysssys.shyssss
+${AnsiColor.BRIGHT_RED}    :yyo` .yyo +yy/  /yy/ `yyy  `yyy`:yy+  ``` :ssy:      +sss` /ss+::oss- oss.  /ss: .sso  `sss   ///yyyyyyssssd:+yyyyy++dssss+`
+${AnsiColor.BRIGHT_RED}    .syysosyyo :yyyo:syy/ :yyyooyyy:`+yyyooyyy`/sss+`    `+sss:/yss:  /sso`osso-:sss- /sso. :sss.  yyyyyyyyyyyssyhs+//+oshssss:`
+${AnsiColor.BRIGHT_RED}     .:ooooo:   -/ooooo-  +oooooo+. `ooooooooo.+++++`    -+++++++++- `++++- :o+++++.  ++++- ++++:  yyyyyyyyyyy+/ossyhhhyss+/-
+${AnsiColor.BRIGHT_RED}                                                                                                   ///////////.  ```:::.``
+${AnsiColor.BRIGHT_RED}
+${AnsiColor.BRIGHT_RED}
+${AnsiColor.GREEN}            .--:::::--.
+${AnsiColor.GREEN}        .:+ooooooooooooo+:.   -`
+${AnsiColor.GREEN}     `:+ooooooooooooooooooo+:/d/
+${AnsiColor.GREEN}    -ooooooooooooooooooooooshNMh.
+${AnsiColor.GREEN}  `/ooooooooooooooooooossydNMMMM+
+${AnsiColor.GREEN}  /ooooooooosssssyyyhhdmNMMMMMMMh.
+${AnsiColor.GREEN} -oooooooyhmNNMMMMMMMMMMMMMMNMMMm:
+${AnsiColor.GREEN} /oooooymMMMMMMMMMMMMMMMMMMNmMMMM/
+${AnsiColor.GREEN} +ooooyNMMMMMMMMMMMMMMMMMNddMMMMN/
+${AnsiColor.GREEN} :oooomMMMMMMMMMMMMMMMMNdhmMMMMMm:
+${AnsiColor.GREEN} `oooomMMMMMMMMMMMMMNdyydMMMMMMNs`
+${AnsiColor.GREEN}  -oooyNMMMMMMNNmdhyyhmMMMMMMMNy-
+${AnsiColor.GREEN}   -oooyddhhyssyyhdNNMMMMMMMmho.
+${AnsiColor.GREEN}    `/mNNsosyhdddmmmmmmddhyso:`
+${AnsiColor.GREEN}      -osooooooooooooooooo+:`
+${AnsiColor.GREEN}         `-/+ooooooooo+/-`
+${AnsiColor.GREEN}              ``...``
+${AnsiColor.YELLOW}
+${AnsiColor.YELLOW}
+${AnsiColor.YELLOW}:: Spring-Boot ::   ${spring-boot.version}
+${AnsiColor.YELLOW}:: Application ::   ${application.title}
+${AnsiColor.YELLOW}                    ${application.version}
+${AnsiColor.YELLOW}

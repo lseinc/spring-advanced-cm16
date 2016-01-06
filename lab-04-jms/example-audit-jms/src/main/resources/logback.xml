@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <logger name="org.springframework.web.servlet.handler" level="INFO"/>
+    <logger name="org.springframework.jta" level="INFO"/>
+    <logger name="org.springframework.jpa" level="INFO"/>
+    <logger name="org.springframework.transaction" level="INFO"/>
+    <logger name="org.springframework.jta" level="INFO"/>
+
+    <logger name="atomikos" level="DEBUG"/>
+    <logger name="com.atomikos" level="INFO"/>
+    <logger name="com.atomikos.icatch" level="WARN"/>
+    <logger name="com.atomikos.jdbc" level="WARN"/>
+
+    <logger name="org.apache.activemq" level="WARN"/>
+
+    <logger name="com.lse.spring.example" level="TRACE" />
+    <logger name="com.lse.spring.example.jms" level="TRACE" />
+    <logger name="com.lse.spring.example.data" level="TRACE" />
+    <logger name="com.lse.spring.example.ws" level="TRACE" />
+</configuration>
