@@ -22,7 +22,7 @@
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<geronimo-jta.version>1.0.1</geronimo-jta.version>
 		<joda.version>2.3</joda.version>
-		<junit.version>4.8.2</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<hibernate.version>4.0.2.GA</hibernate.version>
 		<derby.version>10.12.1.1</derby.version>
 		<javaee.version>5</javaee.version>
