@@ -24,7 +24,7 @@
 		<joda.version>2.3</joda.version>
 		<junit.version>4.9</junit.version>
 		<hibernate.version>4.0.2.GA</hibernate.version>
-		<derby.version>10.12.1.1</derby.version>
+		<derby.version>10.14.2.0</derby.version>
 		<javaee.version>6.0</javaee.version>
 	</properties>
 	<build>
